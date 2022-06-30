@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog : Homepage</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;1,200;1,300&family=Gentium+Plus:ital,wght@0,400;0,700;1,400&family=Kdam+Thmor+Pro&family=Nuosu+SIL&family=Oxygen:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;1,100;1,200;1,300;1,400&family=Roboto+Mono:ital,wght@0,400;0,600;1,300;1,400;1,500&family=Roboto:ital,wght@0,400;0,500;1,300;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/home.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+  <script src="js/myscripts.js" charset="utf-8"></script>
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="activate" style="  font-style: 32px">c23 </a>
+    <a class="mnp" href="editor">Editor</a>
+    <div class="userlogin">
+      <!--  -->
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn mnp">
+        More
+      </button>
+      <div class="dropdown-content">
+        <a href="#">About us</a>
+        <a href="#">Docs</a>
+        <a href="#">Credits</a>
+        <a class="" href="support">Support us</a>
+      </div>
+    </div>
+    <a href="javascript:void(0);" style="font-size:15px; background-color: #0C090A; color:#ffffff" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+  <div class="qtgen">
+    <div class="quote ">
+      <div class="qttext">
+        <span id="quote" class="qtttext animate__animated animate__fadeIn  " onclick="getQuote()">
+
+        </span>
+        <button class="qtbtn " id="bttn" onclick="getQuote()" name="button">New</button>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+  <header class="header hd1">
+    <div class="content ">
+      <h1 class="heading">
+        <span class="small ">Welcome To</span>
+
+        <span class="no-fill ">c23</span>
+      </h1>
+      <a href="editor.html" class="btn hvr-outline-in">write a blog</a>
+    </div>
+
+  </header>
+
+  <!-- blog section -->
+
+  <section class="blogs-section">
+
+    <!-- <div class="blog-card">
+            <img src="img/header.png" class="blog-image" alt="">
+            <h1 class="blog-title">Lorem ipsum dolor sit amet consectetur.</h1>
+            <p class="blog-overview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt fugiat quos porro repellat harum. Adipisci tempora corporis rem cum.</p>
+            <a href="/" class="btn dark">read</a>
+        </div> -->
+
+
+  </section>
+  <footer>
+    <div class="allrights">
+      <div class="rights">
+        <p> &copy; c23. 2022-2023. All Rights Reserved</p>
+        <br>
+
+
+      </div>
+
+
+    </div>
+
+  </footer>
+  <script type="text/javascript">
+    const span = document.querySelector('.qtttext')
+
+    // Select the first button element from
+    // the DOM with a class of 'btn'
+    const qtbtn = document.querySelector('.qtbtn')
+
+    // Listen to the click event.
+    // This is very similar to how you used "onclick=myfunction" but
+    // is grenerally considered the "better" way to do it for a number
+    // of reasons that are outside the scope of this question.
+    qtbtn.addEventListener('click', function() {
+      // Remove the bounce class, if it exists.
+      span.classList.remove('animate__fadeIn')
+
+      // Force the browser to recalculate the page styles
+      // because style updates are typically batched.
+      // Otherwise, it be like nothing happened because
+      // we're removing the class and then immediately adding
+      // it again.
+      span.offsetWidth
+
+      // Finally, add the bounce class so the heading animates.
+      // If you only want the heading to animate the first time
+      // the button is clicked, and do nothing from then out, this
+      // is the only line that is needed in this function.
+      span.classList.add('animate__fadeIn')
+    })
+  </script>
+  <script src="js/quoteScript.js" charset="utf-8"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/nav.js"></script>
+
+</body>
+
+</html>
